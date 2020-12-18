@@ -30,6 +30,21 @@ namespace AnagramsTest
       bool expected = Program.IsAnagram("giro", "orr ");
       Assert.AreEqual(expected, false);
     }
+
+    [Test]
+    public void Escenario2_1()
+    {
+      bool expected = Program.FindAnSpecificAnagramInFile(@"C:\Users\kevin\Projects\anagrams-cs\Anagrams\bin\Debug\Input.txt", "paro");
+      Assert.AreEqual(expected, true);
+    }
+
+    [Test]
+    public void Escenario2_2()
+    {
+      bool expected = Program.FindAnSpecificAnagramInFile(@"C:\Users\kevin\Projects\anagrams-cs\Anagrams\bin\Debug\Input.txt", "lolo");
+      Assert.AreEqual(expected, false);
+    }
+
   }
 
 }

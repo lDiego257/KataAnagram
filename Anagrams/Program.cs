@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.IO;
 
 namespace Anagrams
 {
@@ -22,6 +23,31 @@ namespace Anagrams
       if (c1.SequenceEqual(c2)) return true;
 
       return false;
+    }
+
+    public static bool FindAnSpecificAnagramInFile(string path, string g)
+    {
+
+      bool isAnagramAux = true;
+      var content = File.ReadAllLines(path);
+      content.GroupBy(w => String.Concat(w.OrderBy(c => c)));
+      content.Where(g => g.Count() > 1);
+      content.ToList();
+
+      foreach (string x in content)
+      {
+        if (g.Length == x.Length && g != x)
+        {
+          if (IsAnagram(g, x))
+          {
+            if (isAnagramAux) Console.Write(g);
+            Console.Write(" " + x);
+            isAnagramAux = false;
+          }
+        }
+      }
+      return !(isAnagramAux);
+
     }
   }
 }
