@@ -45,6 +45,13 @@ namespace AnagramsTest
       Assert.AreEqual(expected, false);
     }
 
+    [Test]
+    public void Escenario3_1()
+    {
+      int expected = Program.FindAllAnagramsInFile(@"C:\Users\kevin\Projects\anagrams-cs\Anagrams\bin\Debug\Input.txt", @"C:\Users\kevin\Projects\anagrams-cs\Anagrams\bin\Debug\Output.txt");
+      Assert.AreEqual(expected, 2);
+    }
+
   }
 
 }

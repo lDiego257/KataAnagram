@@ -58,5 +58,21 @@ namespace Anagrams
         file.WriteLine(g);
       }
     }
+
+    public static int FindAllAnagramsInFile(string path, string outPath)
+    {
+      int counter = 0;
+      var anagrams = File.ReadAllLines(path)
+                         .GroupBy(w => new string(w.OrderBy(c => c).ToArray()))
+                         .Where(g => g.Count() > 1);
+
+      foreach (var anagram in anagrams)
+      {
+        WriteInFile(outPath, (string.Join(" ", anagram)));
+        counter++;
+      }
+      return counter++;
+    }
+
   }
 }
