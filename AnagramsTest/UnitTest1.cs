@@ -51,7 +51,12 @@ namespace AnagramsTest
       int expected = Program.FindAllAnagramsInFile(@"C:\Users\kevin\Projects\anagrams-cs\Anagrams\bin\Debug\Input.txt", @"C:\Users\kevin\Projects\anagrams-cs\Anagrams\bin\Debug\Output.txt");
       Assert.AreEqual(expected, 2);
     }
-
+    [Test]
+    public void Escenario3_2()
+    {
+      int expected = Program.FindAllAnagramsInFile(@"C:\Users\kevin\Projects\anagrams-cs\wordlist.txt", @"C:\Users\kevin\Projects\anagrams-cs\Anagrams\bin\Debug\Output.txt");
+      Assert.AreEqual(expected, 20683);
+    }
   }
 
 }
