@@ -16,5 +16,13 @@ namespace AnagramsTest
       bool expected = Program.IsAnagram("amor", "mora");
       Assert.AreEqual(expected, true);
     }
+
+    [Test]
+    public void Escenario1_2()
+    {
+      bool expected = Program.IsAnagram("giro", "ori");
+      Assert.AreEqual(expected, false);
+    }
   }
+
 }
