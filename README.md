@@ -20,7 +20,7 @@
 - Caso de prueba #1 Probar que una palabra sea un anagrama.
   1.1 IsAnagram("amor", "mora") --> True
   1.2 IsAnagram("giro", "ori") --> False
-  1.3 IsAnagram("giro", "orr") --> False
+  1.3 IsAnagram("giro", "orr ") --> False
 
 - Caso de prueba #2 Probar si un archivo se encuentra anagramas de un string:
   2.1 -- findAnSpecificAnagramInFile(path, "paro") --> True
