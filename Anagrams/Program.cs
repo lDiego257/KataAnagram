@@ -49,5 +49,14 @@ namespace Anagrams
       return !(isAnagramAux);
 
     }
+
+    public static void WriteInFile(string outPath, string g)
+    {
+      using (StreamWriter file =
+        new StreamWriter(outPath, true))
+      {
+        file.WriteLine(g);
+      }
+    }
   }
 }
